@@ -96,20 +96,23 @@ const App = () => {
 
     }
 
-    return (<div>
+    return (<div id='main'>
 
         <h1>Our Menu</h1><br />
         <button onClick={() => filterDishes('')}>All</button>
-        <button onClick={() => filterDishes('breakfast')}>BreakFast</button>
-        <button onClick={() => filterDishes('lunch')}>Lunch</button>
-        <button onClick={() => filterDishes('shakes')}>Shakes</button>
+        <button id='filter-btn-1' onClick={() => filterDishes('breakfast')}>BreakFast</button>
+        <button id='filter-btn-2' onClick={() => filterDishes('lunch')}>Lunch</button>
+        <button id='filter-btn-3' onClick={() => filterDishes('shakes')}>Shakes</button>
         <div>
             {
 
                 items.map((item) =>
 
                     <div>
-                        <p>{item.id}</p>
+                       <img src={item.img}/>
+                       <p>{item.title}</p>
+                       <p>{item.price}</p>
+                       <p>{item.desc}</p>
                     </div>
 
                 )
