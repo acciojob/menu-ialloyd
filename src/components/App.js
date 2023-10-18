@@ -96,6 +96,7 @@ const App = () => {
 
     }
 
+   
     return (<div id='main'>
 
         <h1>Our Menu</h1><br />
@@ -108,11 +109,11 @@ const App = () => {
 
                 items.map((item) =>
 
-                    <div>
-                       <img src={item.img}/>
-                       <p>{item.title}</p>
-                       <p>{item.price}</p>
-                       <p>{item.desc}</p>
+                    <div data-test-id={`menu-item-${item.category}`}>
+                        <img src={item.img} />
+                        <p>{item.title}</p>
+                        <p>{item.price}</p>
+                        <p>{item.desc}</p>
                     </div>
 
                 )
